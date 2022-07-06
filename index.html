@@ -100,22 +100,9 @@
         console.log("this is current day", currentDay);
 
         // Saves timeblock description to local storage
-        // var text = $('.description').text('');
-        // var nineAm = $("#9am");
-        // var tenAm = $("#10am");
-        // var elevenAm = $("#11am");
-        // var twelvePm = $("#12pm");
-        // var onePm = $("#1pm");
-        // var twoPm = $("#2pm");
-        // var threePm = $("#3pm");
-        // var fourPm = $("#4pm");
-        // var fivePm = $("#5pm");
-
         $(function (){
           $("#submit1").click(function () {
             var nineAm = $("#9am").val();
-            // console.log(nineAm);
-            // alert(JSON.stringify(nineAm));
             localStorage.setItem('9am', nineAm);
           })
         });
@@ -123,81 +110,57 @@
         $(function (){
           $("#submit2").click(function () {
             var tenAm = $("#10am").val();
-            // console.log(tenAm);
-            // alert(JSON.stringify(tenAm));
             localStorage.setItem('10am', tenAm);
           })
- 
         });
                 
         $(function (){
           $("#submit3").click(function () {
             var elevenAm = $("#11am").val();
-            // console.log(elevenAm);
-            // alert(JSON.stringify(elevenAm));
             localStorage.setItem('11am', elevenAm);
           })
- 
         });
 
         $(function (){
           $("#submit4").click(function () {
             var twelvePm = $("#12pm").val();
-            // console.log(twelvePm);
-            // alert(JSON.stringify(twelvePm));
             localStorage.setItem('12pm', twelvePm);
           })
- 
         });
                 
         $(function (){
           $("#submit5").click(function () {
             var onePm = $("#1pm").val();
-            // console.log(onePm);
-            // alert(JSON.stringify(onePm));
             localStorage.setItem('1pm', onePm);
           })
- 
         });
-                $(function (){
-
+                
+        $(function (){
           $("#submit6").click(function () {
             var twoPm = $("#2pm").val();
-            // console.log(twoPm);
-            // alert(JSON.stringify(twoPm));
             localStorage.setItem('2pm', twoPm);
           })
- 
         });
                 
         $(function (){
           $("#submit7").click(function () {
             var threePm = $("#3pm").val();
-            // console.log(threePm);
-            // alert(JSON.stringify(threePm));
             localStorage.setItem('3pm', threePm);
           })
- 
         });
                 
         $(function (){
           $("#submit8").click(function () {
             var fourPm = $("#4pm").val();
-            // console.log(fourPm);
-            // alert(JSON.stringify(fourPm));
             localStorage.setItem('4pm', fourPm);
           })
- 
         });
 
         $(function (){
           $("#submit9").click(function () {
             var fivePm = $("#5pm").val();
-            // console.log(fivePm);
-            // alert(JSON.stringify(fivePm));
             localStorage.setItem('5pm', fivePm);
           })
- 
         });
 
         // Pulls timeblock description from local storage on refresh
@@ -206,8 +169,45 @@
           $('#9am').html(nineAmContents);
         })
 
-        // $("#9am").val(localStorage.getItem("description"));
+        $(document).ready(() => {
+          var tenAmContents = localStorage.getItem("10am");
+          $('#10am').html(tenAmContents);
+        })
 
+        $(document).ready(() => {
+          var elevenAmContents = localStorage.getItem("11am");
+          $('#11am').html(elevenAmContents);
+        })
+
+        $(document).ready(() => {
+          var twelvePmContents = localStorage.getItem("12pm");
+          $('#12pm').html(twelvePmContents);
+        })
+
+        $(document).ready(() => {
+          var onePmContents = localStorage.getItem("1pm");
+          $('#1pm').html(onePmContents);
+        })
+
+        $(document).ready(() => {
+          var twoPmContents = localStorage.getItem("2pm");
+          $('#2pm').html(twoPmContents);
+        })
+
+        $(document).ready(() => {
+          var threePmContents = localStorage.getItem("3pm");
+          $('#3pm').html(threePmContents);
+        })
+
+        $(document).ready(() => {
+          var fourPmContents = localStorage.getItem("4pm");
+          $('#4pm').html(fourPmContents);
+        })
+
+        $(document).ready(() => {
+          var fivePmContents = localStorage.getItem("5pm");
+          $('#5pm').html(fivePmContents);
+        })
 
         // Updates timeblock color based on current time
         // var 9am = 
