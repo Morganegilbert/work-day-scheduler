@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
-
+  <!-- Scripts source -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>      
   <body>
     <header class="jumbotron text-center" style="border-bottom: 10px;">
       <h1 class="display-3">Work Day Scheduler</h1>
@@ -36,7 +38,7 @@
         <h2 class="hour col"> 9AM
         </h2>
         <textarea class="description col-10" id="description"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="button" onclick="addLocal()"></button>
+        <button class="saveBtn ui-icon ui-icon-disk col" type="submit" onclick="addLocal()"></button>
       </div>
       <div class="row time-block" id="10am">
         <h2 class="hour col"> 10AM
@@ -86,11 +88,14 @@
         <textarea class="description col-10"></textarea>
         <button class="saveBtn ui-icon ui-icon-disk col" type="submit"></button>
       </div>
-      <script>
+
+    <script>
 
         // Update date in Header id current-day
-
-
+        var currentDay = moment().format("dddd, MMMM Do");
+        $("#current-day").html(currentDay);
+        console.log("this is current day", currentDay);
+        
         // Saves timeblock description to local storage
 
         // Pulls timeblock description from local storage
@@ -100,7 +105,6 @@
       </script>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
   </body>
 </html>
