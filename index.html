@@ -24,6 +24,8 @@
   <!-- Scripts source -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>      
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <body>
     <header class="jumbotron text-center" style="border-bottom: 10px;">
       <h1 class="display-3">Work Day Scheduler</h1>
@@ -33,12 +35,13 @@
       </p>
     </header>
     <div class="container">
-      <!-- Timeblocks -->
-      <div class="row time-block" id="9am">
+      <!-- Timeblocks 💾-->
+      <div class="row time-block">
         <h2 class="hour col"> 9AM
         </h2>
-        <textarea class="description col-10" id="description"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="submit" onclick="addLocal()"></button>
+        <textarea class="description col-10" id="9am"></textarea>
+        <button class="btn-default btn-sm saveBtn col" type="button" id="submit" style="font-size:25px; align-items: center;">💾
+        </button>
       </div>
       <div class="row time-block" id="10am">
         <h2 class="hour col"> 10AM
@@ -95,13 +98,69 @@
         var currentDay = moment().format("dddd, MMMM Do");
         $("#current-day").html(currentDay);
         console.log("this is current day", currentDay);
-        
-        // Saves timeblock description to local storage
 
-        // Pulls timeblock description from local storage
+        // Saves timeblock description to local storage
+        // var text = $('.description').text('');
+        // var nineAm = $("#9am");
+        // var tenAm = $("#10am");
+        // var elevenAm = $("#11am");
+        // var twelvePm = $("#12pm");
+        // var onePm = $("#1pm");
+        // var twoPm = $("#2pm");
+        // var threePm = $("#3pm");
+        // var fourPm = $("#4pm");
+        // var fivePm = $("#5pm");
+
+        $(function (){
+          $("#submit").click(function () {
+            var nineAm = $("#9am").val();
+            console.log(nineAm);
+            alert(JSON.stringify(nineAm));
+            localStorage.setItem('9am', nineAm);
+          })
+        });
+        
+        $(function (){
+
+          $("#submit").click(function () {
+            var tenAm = $("#10am").val();
+            console.log(tenAm);
+            alert(JSON.stringify(tenAm));
+            localStorage.setItem('10am', tenAm);
+          })
+ 
+        });
+                
+        $(function (){
+
+          $("#submit").click(function () {
+            var nineAm = $("#9am").val();
+            console.log(nineAm);
+            alert(JSON.stringify(nineAm));
+            localStorage.setItem('9am', nineAm);
+          })
+ 
+        });
+
+        $(function (){
+
+          $("#submit").click(function () {
+            var nineAm = $("#9am").val();
+            console.log(nineAm);
+            alert(JSON.stringify(nineAm));
+            localStorage.setItem('9am', nineAm);
+          })
+ 
+        });
+        // Pulls timeblock description from local storage on refresh
+        $("#9am").val(localStorage.getItem ("description"));
+
 
         // Updates timeblock color based on current time
-
+        // var 9am = 
+        // var currentTime = moment().format("ET")
+        // if (currentTime > )
+        // $("#current-day").addClass(present);
       </script>
     </div>
 
