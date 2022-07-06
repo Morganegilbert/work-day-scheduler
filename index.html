@@ -201,7 +201,12 @@
         });
 
         // Pulls timeblock description from local storage on refresh
-        $("#9am").val(localStorage.getItem ("description"));
+        $(document).ready(() => {
+          var nineAmContents = localStorage.getItem("9am");
+          $('#9am').html(nineAmContents);
+        })
+
+        // $("#9am").val(localStorage.getItem("description"));
 
 
         // Updates timeblock color based on current time
