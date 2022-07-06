@@ -40,56 +40,56 @@
         <h2 class="hour col"> 9AM
         </h2>
         <textarea class="description col-10" id="9am"></textarea>
-        <button class="btn-default btn-sm saveBtn col" type="button" id="submit" style="font-size:25px; align-items: center;">💾
+        <button class="btn-default btn-sm saveBtn col" type="button" id="submit1" style="font-size:25px;">💾
         </button>
       </div>
-      <div class="row time-block" id="10am">
+      <div class="row time-block">
         <h2 class="hour col"> 10AM
         </h2>
-        <textarea class="description col-10"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="submit"></button>
+        <textarea class="description col-10" id="10am"></textarea>
+        <button class="saveBtn ui-icon ui-icon-disk col" type="button" id="submit2" style="font-size:25px;">💾</button>
       </div>
-      <div class="row time-block" id="11am">
+      <div class="row time-block">
         <h2 class="hour col"> 11AM
         </h2>
-        <textarea class="description col-10"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="submit"></button>
+        <textarea class="description col-10" id="11am"></textarea>
+        <button class="saveBtn ui-icon ui-icon-disk col" type="button" id="submit3" style="font-size:25px;">💾</button>
       </div>
-      <div class="row time-block" id="12pm">
+      <div class="row time-block">
         <h2 class="hour col"> 12PM
         </h2>
-        <textarea class="description col-10"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="submit"></button>
+        <textarea class="description col-10" id="12pm"></textarea>
+        <button class="saveBtn ui-icon ui-icon-disk col" type="button" id="submit4" style="font-size:25px;">💾</button>
       </div>
-      <div class="row time-block" id="1pm">
+      <div class="row time-block">
         <h2 class="hour col"> 1PM
         </h2>
-        <textarea class="description col-10"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="submit"></button>
+        <textarea class="description col-10" id="1pm"></textarea>
+        <button class="saveBtn ui-icon ui-icon-disk col" type="button" id="submit5" style="font-size:25px;">💾</button>
       </div>
-      <div class="row time-block" id="2pm">
+      <div class="row time-block">
         <h2 class="hour col"> 2PM
         </h2>
-        <textarea class="description col-10"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="submit"></button>
+        <textarea class="description col-10" id="2pm"></textarea>
+        <button class="saveBtn ui-icon ui-icon-disk col" type="button" id="submit6" style="font-size:25px;">💾</button>
       </div>
-      <div class="row time-block" id="3pm">
+      <div class="row time-block">
         <h2 class="hour col"> 3PM
         </h2>
-        <textarea class="description col-10"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="submit"></button>
+        <textarea class="description col-10" id="3pm"></textarea>
+        <button class="saveBtn ui-icon ui-icon-disk col" type="button" id="submit7" style="font-size:25px;">💾</button>
       </div>
-      <div class="row time-block" id="4pm">
+      <div class="row time-block">
         <h2 class="hour col"> 4PM
         </h2>
-        <textarea class="description col-10"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="submit"></button>
+        <textarea class="description col-10" id="4pm"></textarea>
+        <button class="saveBtn ui-icon ui-icon-disk col" type="button" id="submit8" style="font-size:25px;">💾</button>
       </div>
-      <div class="row time-block" id="5pm">
+      <div class="row time-block">
         <h2 class="hour col"> 5PM
         </h2>
-        <textarea class="description col-10"></textarea>
-        <button class="saveBtn ui-icon ui-icon-disk col" type="submit"></button>
+        <textarea class="description col-10" id="5pm"></textarea>
+        <button class="saveBtn ui-icon ui-icon-disk col" type="button" id="submit9" style="font-size:25px;">💾</button>
       </div>
 
     <script>
@@ -112,46 +112,94 @@
         // var fivePm = $("#5pm");
 
         $(function (){
-          $("#submit").click(function () {
+          $("#submit1").click(function () {
             var nineAm = $("#9am").val();
-            console.log(nineAm);
-            alert(JSON.stringify(nineAm));
+            // console.log(nineAm);
+            // alert(JSON.stringify(nineAm));
             localStorage.setItem('9am', nineAm);
           })
         });
         
         $(function (){
-
-          $("#submit").click(function () {
+          $("#submit2").click(function () {
             var tenAm = $("#10am").val();
-            console.log(tenAm);
-            alert(JSON.stringify(tenAm));
+            // console.log(tenAm);
+            // alert(JSON.stringify(tenAm));
             localStorage.setItem('10am', tenAm);
           })
  
         });
                 
         $(function (){
-
-          $("#submit").click(function () {
-            var nineAm = $("#9am").val();
-            console.log(nineAm);
-            alert(JSON.stringify(nineAm));
-            localStorage.setItem('9am', nineAm);
+          $("#submit3").click(function () {
+            var elevenAm = $("#11am").val();
+            // console.log(elevenAm);
+            // alert(JSON.stringify(elevenAm));
+            localStorage.setItem('11am', elevenAm);
           })
  
         });
 
         $(function (){
-
-          $("#submit").click(function () {
-            var nineAm = $("#9am").val();
-            console.log(nineAm);
-            alert(JSON.stringify(nineAm));
-            localStorage.setItem('9am', nineAm);
+          $("#submit4").click(function () {
+            var twelvePm = $("#12pm").val();
+            // console.log(twelvePm);
+            // alert(JSON.stringify(twelvePm));
+            localStorage.setItem('12pm', twelvePm);
           })
  
         });
+                
+        $(function (){
+          $("#submit5").click(function () {
+            var onePm = $("#1pm").val();
+            // console.log(onePm);
+            // alert(JSON.stringify(onePm));
+            localStorage.setItem('1pm', onePm);
+          })
+ 
+        });
+                $(function (){
+
+          $("#submit6").click(function () {
+            var twoPm = $("#2pm").val();
+            // console.log(twoPm);
+            // alert(JSON.stringify(twoPm));
+            localStorage.setItem('2pm', twoPm);
+          })
+ 
+        });
+                
+        $(function (){
+          $("#submit7").click(function () {
+            var threePm = $("#3pm").val();
+            // console.log(threePm);
+            // alert(JSON.stringify(threePm));
+            localStorage.setItem('3pm', threePm);
+          })
+ 
+        });
+                
+        $(function (){
+          $("#submit8").click(function () {
+            var fourPm = $("#4pm").val();
+            // console.log(fourPm);
+            // alert(JSON.stringify(fourPm));
+            localStorage.setItem('4pm', fourPm);
+          })
+ 
+        });
+
+        $(function (){
+          $("#submit9").click(function () {
+            var fivePm = $("#5pm").val();
+            // console.log(fivePm);
+            // alert(JSON.stringify(fivePm));
+            localStorage.setItem('5pm', fivePm);
+          })
+ 
+        });
+
         // Pulls timeblock description from local storage on refresh
         $("#9am").val(localStorage.getItem ("description"));
 
