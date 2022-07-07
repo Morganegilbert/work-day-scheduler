@@ -36,56 +36,56 @@
     </header>
     <div class="container">
       <!-- Timeblocks 💾-->
-      <div class="row time-block future">
+      <div class="row time-block">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;"> 9AM
         </h2>
         <textarea class="description col-10" id="9am" style="height: 80px;"></textarea>
         <button class="saveBtn col" type="button" id="submit1" style="font-size:25px; height: 80px;">💾
         </button>
       </div>
-      <div class="row time-block future">
+      <div class="row time-block">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;""> 10AM
         </h2>
         <textarea class="description col-10" id="10am" style="height: 80px;"></textarea>
         <button class="saveBtn col" type="button" id="submit2" style="font-size:25px; height: 80px;">💾</button>
       </div>
-      <div class="row time-block future">
+      <div class="row time-block">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;""> 11AM
         </h2>
         <textarea class="description col-10" id="11am" style="height: 80px;"></textarea>
         <button class="saveBtn col" type="button" id="submit3" style="font-size:25px; height: 80px;">💾</button>
       </div>
-      <div class="row time-block future">
+      <div class="row time-block">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;""> 12PM
         </h2>
         <textarea class="description col-10" id="12pm" style="height: 80px;"></textarea>
         <button class="saveBtn col" type="button" id="submit4" style="font-size:25px; height: 80px;">💾</button>
       </div>
-      <div class="row time-block future">
+      <div class="row time-block">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;""> 1PM
         </h2>
         <textarea class="description col-10" id="1pm" style="height: 80px;"></textarea>
         <button class="saveBtn col" type="button" id="submit5" style="font-size:25px; height: 80px;">💾</button>
       </div>
-      <div class="row time-block future">
+      <div class="row time-block">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;""> 2PM
         </h2>
         <textarea class="description col-10" id="2pm" style="height: 80px;"></textarea>
         <button class="saveBtn col" type="button" id="submit6" style="font-size:25px; height: 80px;">💾</button>
       </div>
-      <div class="row time-block future">
+      <div class="row time-block">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;""> 3PM
         </h2>
         <textarea class="description col-10" id="3pm" style="height: 80px;"></textarea>
         <button class="saveBtn col" type="button" id="submit7" style="font-size:25px; height: 80px;">💾</button>
       </div>
-      <div class="row time-block future">
+      <div class="row time-block">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;""> 4PM
         </h2>
         <textarea class="description col-10" id="4pm" style="height: 80px;"></textarea>
         <button class="saveBtn col" type="button" id="submit8" style="font-size:25px; height: 80px;">💾</button>
       </div>
-      <div class="row time-block future">
+      <div class="row time-block">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;""> 5PM
         </h2>
         <textarea class="description col-10" id="5pm" style="height: 80px;"></textarea>
@@ -210,12 +210,39 @@
         })
 
         // Updates timeblock color based on current time
-        $(document).ready(() => {
-          let date = new Date();
-          let time = 
-        })
+        // $(document).ready(() => {
+        //   let time = new Date();
+        //   let time = 
+        // })
         // var 9am = 
         // var currentTime = moment().format("ET")
+        $(document).ready(() => {
+          var currentTime = new Date().getHours();
+          console.log(currentTime);
+          var nineAm = 9;
+          var tenAm = 10;
+          var elevenAm = 11;
+          var twelvePm = 12;
+          var onePm = 13;
+          var twoPm = 14;
+          var threePm = 15;
+          var fourPm = 16;
+          var fivePm = 17;
+          if (currentTime > nineAm) {
+            $(".container div").addClass("past");
+            console.log("Past?");
+          }
+          if (currentTime > nineAm) {
+            $(".container div").addClass("future");
+            console.log("future?");
+
+          }
+          else {
+            $(".container div").addClass("present");
+            console.log("Present?");
+
+          }
+        })
         // if (currentTime > )
         // $("#current-day").addClass(present);
       </script>
