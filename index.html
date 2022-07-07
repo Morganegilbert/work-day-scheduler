@@ -35,7 +35,7 @@
       </p>
     </header>
     <div class="container">
-      <!-- Timeblocks 💾-->
+      <!-- Timeblocks -->
       <div class="row time-block" id="nineAmRow">
         <h2 class="hour col" style="height: 80px; font-size: 20px; text-align: right; padding-top: 10px;"> 9AM
         </h2>
@@ -210,17 +210,8 @@
         })
 
         // Updates timeblock color based on current time
-        // $(document).ready(() => {
-        //   let time = new Date();
-        //   let time = 
-        // })
-        // var 9am = 
-        // var currentTime = moment().format("ET")
         $(document).ready(() => {
           var currentTime = moment().format('h.mm.ssa');
-          // var endTime = moment('9:00am', 'h.mm.ssa');
-          console.log("this is currenttime", currentTime);
-          // console.log("this is endtime", endTime);
           var nineAm = moment('9:00am', 'h.mm.ssa');
           var tenAm = moment('10:00am', 'h.mm.ssa');
           var elevenAm = moment('11:00am', 'h.mm.ssa');
@@ -231,12 +222,6 @@
           var fourPm = moment('4:00pm', 'h.mm.ssa');
           var fivePm = moment('5:00pm', 'h.mm.ssa');
           var sixPm = moment('6:00pm', 'h.mm.ssa');
-
-          console.log("this is my condition", moment().isBefore(threePm) && moment().isAfter(twoPm));
-
-          if (moment().isBefore(tenAm) && moment().isAfter(ninAm)) {
-            $("div #nineAmRow").addClass("present");
-          }
           presentTimeDetection(nineAm, tenAm, 'div #nineAmRow');
           presentTimeDetection(tenAm, elevenAm, 'div #tenAmRow');
           presentTimeDetection(elevenAm, twelvePm, 'div #elevenAmRow');
@@ -246,22 +231,8 @@
           presentTimeDetection(threePm, fourPm, 'div #threePmRow');
           presentTimeDetection(fourPm, fivePm, 'div #fourPmRow');
           presentTimeDetection(fivePm, sixPm, 'div #fivePmRow');
-
-        //   if (currentTime > nineAm || tenAm || elevenAm || twelvePm || onePm || twoPm || threePm || fourPm || fivePm) {
-        //     $("div .9am").addClass("past");
-        //     console.log("Past?");
-        //   }
-        //   if (currentTime < nineAm || tenAm || elevenAm || twelvePm || onePm || twoPm || threePm || fourPm || fivePm) {
-        //     $(".container div").addClass("future");
-        //     console.log("future?");
-        //   }
-        //   else {
-        //     $(".container div").addClass("present");
-        //     console.log("Present?");
-        //   }
         })
-        // if (currentTime > )
-        // $("#current-day").addClass(present);
+
         function presentTimeDetection(topOfTheHour, bottomOfTheHour, currentHourString) {
           if (moment().isBefore(bottomOfTheHour) && moment().isAfter(topOfTheHour)) {
             $(currentHourString).addClass("present");
@@ -272,7 +243,6 @@
           else if (moment().isBefore(topOfTheHour)) {
             $(currentHourString).addClass("future");
           }
-          console.log("this is my condition", moment().isBefore(bottomOfTheHour) && moment().isAfter(topOfTheHour));
         }
 
       </script>
