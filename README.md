@@ -10,7 +10,7 @@
 <br>
 
 # Screenshot Below:
-![Work Day Scheduler Screenshot](./assets/images/demo.jpg
+![Work Day Scheduler Screenshot](./assets/images/demo.jpg "Work Day Scheduler")
 <br>
 <br>
 
