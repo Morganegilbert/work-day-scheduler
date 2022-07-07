@@ -226,19 +226,27 @@
           var elevenAm = moment('11:00am', 'h.mm.ssa');
           var twelvePm = moment('12:00pm', 'h.mm.ssa');
           var onePm = moment('1:00pm', 'h.mm.ssa');
-          var twoPm = moment('6:00pm', 'h.mm.ssa');
-          var threePm = moment('7:00pm', 'h.mm.ssa');
+          var twoPm = moment('2:00pm', 'h.mm.ssa');
+          var threePm = moment('3:00pm', 'h.mm.ssa');
           var fourPm = moment('4:00pm', 'h.mm.ssa');
           var fivePm = moment('5:00pm', 'h.mm.ssa');
+          var sixPm = moment('6:00pm', 'h.mm.ssa');
+
           console.log("this is my condition", moment().isBefore(threePm) && moment().isAfter(twoPm));
 
           if (moment().isBefore(tenAm) && moment().isAfter(ninAm)) {
             $("div #nineAmRow").addClass("present");
           }
+          presentTimeDetection(nineAm, tenAm, 'div #nineAmRow');
+          presentTimeDetection(tenAm, elevenAm, 'div #tenAmRow');
+          presentTimeDetection(elevenAm, twelvePm, 'div #elevenAmRow');
+          presentTimeDetection(twelvePm, onePm, 'div #twelvePmRow');
+          presentTimeDetection(onePm, twoPm, 'div #onePmRow');
+          presentTimeDetection(twoPm, threePm, 'div #twoPmRow');
+          presentTimeDetection(threePm, fourPm, 'div #threePmRow');
+          presentTimeDetection(fourPm, fivePm, 'div #fourPmRow');
+          presentTimeDetection(fivePm, sixPm, 'div #fivePmRow');
 
-          if (moment().isBefore(threePm) && moment().isAfter(twoPm)) {
-            $("div #twoPmRow").addClass("present");
-          }
         //   if (currentTime > nineAm || tenAm || elevenAm || twelvePm || onePm || twoPm || threePm || fourPm || fivePm) {
         //     $("div .9am").addClass("past");
         //     console.log("Past?");
@@ -254,9 +262,19 @@
         })
         // if (currentTime > )
         // $("#current-day").addClass(present);
-        // function presentTimeDetection(topOfTheHour, bottomOfTheHour, currentHourString) {
-          
-        // }
+        function presentTimeDetection(topOfTheHour, bottomOfTheHour, currentHourString) {
+          if (moment().isBefore(bottomOfTheHour) && moment().isAfter(topOfTheHour)) {
+            $(currentHourString).addClass("present");
+          }
+          else if (moment().isAfter(bottomOfTheHour)) {
+            $(currentHourString).addClass("past");
+          }
+          else if (moment().isBefore(topOfTheHour)) {
+            $(currentHourString).addClass("future");
+          }
+          console.log("this is my condition", moment().isBefore(bottomOfTheHour) && moment().isAfter(topOfTheHour));
+        }
+
       </script>
     </div>
 
